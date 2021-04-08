@@ -24,4 +24,24 @@ chevronRight.click(function () {
     }
 });
 
-// CHEVRON LEFT 
+// CHEVRON LEFT
+chevronLeft.click(function () {
+    
+    // devo prima togliere la classe active all'immagine corrente 
+    var currentImage = $('.active');
+    currentImage.removeClass('active');
+
+    // assegno a una variabile l'immagine precedente (elemento html fratello) 
+    var prevImage = currentImage.prev();
+    console.log(prevImage);
+
+    // aggiungo classe active 
+    prevImage.addClass('active');
+
+    // alla prima immagine devo passare all'ultima 
+    // se l'immagine corrente ha classe first, rimetto classe active all'ultima
+    if (currentImage.hasClass('first')) {
+        var lastImage = $('.last');
+        lastImage.addClass('active');
+    }
+});

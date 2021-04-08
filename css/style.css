@@ -6,11 +6,11 @@
 
 img {
     width: 100%;
+    display: none;
 }
 
 .container {
-    width: 70%;
-    height: 550px;
+    width: 60%;
     margin: 20px auto;
 }
 
@@ -20,7 +20,12 @@ img {
     align-items: center;
 }
 
-.chevron {
+.chevron-left, .chevron-right {
     font-size: 30px;
-    padding: 0 10px;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.active {
+    display: block;
 }
